@@ -8,6 +8,9 @@ RUN apt-get update \
     gosu \
     procps \
     python3 \
+    python3-pip \
+    python3-psycopg2 \
+    libpq-dev \
     tini \
     build-essential \
     zip \
