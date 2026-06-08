@@ -32,7 +32,7 @@ RUN useradd -m -s /bin/bash openclaw \
   && chown -R openclaw:openclaw /app \
   && mkdir -p /data && chown openclaw:openclaw /data \
   && mkdir -p /home/linuxbrew/.linuxbrew && chown -R openclaw:openclaw /home/linuxbrew
-
+RUN pip3 install psycopg2-binary --break-system-packages
 USER openclaw
 RUN NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
